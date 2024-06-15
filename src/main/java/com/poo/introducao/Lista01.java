@@ -35,6 +35,6 @@ public class Lista01 {
         Scanner sc2 = new Scanner(System.in);
         sobrenome = sc2.nextLine();
 
-        System.out.println("Olá, " + nome +sobrenome);
+        System.out.println("Olá, " + nome + " " + sobrenome);
     }
 }
