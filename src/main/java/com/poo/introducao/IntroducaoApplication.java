@@ -9,7 +9,7 @@ public class IntroducaoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(IntroducaoApplication.class, args);
 
-		System.out.println("Olá, mundo!");
+		Lista01 lista = new Lista01();
+		lista.ex01();
 	}
-
 }
