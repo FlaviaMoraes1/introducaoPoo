@@ -86,4 +86,19 @@ public class Lista01 {
 
         System.out.println("O valor total do terreno é: R$ " + valorM2 * area);
     }
+    public void ex06(){
+        int distanciaPercorrida;
+        double totalCombustivel;
+        double custoCombustivel = 6.39;
+
+        System.out.println("Qual a distancia percorrida? ");
+        Scanner sc8 = new Scanner(System.in);
+        distanciaPercorrida = sc8.nextInt();
+
+        System.out.println("Qual o valor total do combustível? ");
+        Scanner sc9 = new Scanner(System.in);
+        totalCombustivel = sc9.nextDouble();
+
+        System.out.println("Sua autonomia foi de " + (distanciaPercorrida/(totalCombustivel/custoCombustivel)) + " KM/L.");
+    }
 }
