@@ -38,6 +38,7 @@ public class Lista01 {
         System.out.println("Olá, " + nome + " " + sobrenome);
     }
     public void ex03(){
+        
        double valorAConverter;
        double valorConvertido;
 
@@ -48,5 +49,19 @@ public class Lista01 {
        valorConvertido = valorAConverter / (5.25);
 
        System.out.println("O valor convertido é de: " + valorConvertido + " dólar(es)");
+    }
+    public void ex04(){
+        int numeroDigitado;
+        int antecessor;
+        int sucessor;
+
+        System.out.println("Digite um número inteiro para saber o antecessor e o sucessor: ");
+        Scanner sc4 = new Scanner(System.in);
+
+        numeroDigitado = sc4.nextInt();
+
+        antecessor = numeroDigitado - 1;
+        sucessor = numeroDigitado + 1;
+        System.out.println("O antecessor é " + antecessor + " e o seucessor é " + sucessor);
     }
 }
