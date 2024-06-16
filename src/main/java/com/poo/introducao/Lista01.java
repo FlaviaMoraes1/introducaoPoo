@@ -101,4 +101,28 @@ public class Lista01 {
 
         System.out.println("Sua autonomia foi de " + (distanciaPercorrida/(totalCombustivel/custoCombustivel)) + " KM/L.");
     }
+    public void ex07(){
+        float nota1;
+        float nota2;
+        float nota3;
+        float nota4;
+        float mediaNotas;
+
+        System.out.println("Digite a nota do primeiro bimeste: ");
+        Scanner sc10 = new Scanner(System.in);
+        nota1 = sc10.nextFloat();
+        System.out.println("Digite a nota do segundo bimeste: ");
+        Scanner sc11 = new Scanner(System.in);
+        nota2 = sc11.nextFloat();
+        System.out.println("Digite a nota do terceiro bimeste: ");
+        Scanner sc12 = new Scanner(System.in);
+        nota3 = sc12.nextFloat();
+        System.out.println("Digite a nota do quarto bimeste: ");
+        Scanner sc13 = new Scanner(System.in);
+        nota4 = sc13.nextFloat();
+
+        mediaNotas = (nota1+nota2+nota3+nota4)/4;
+
+        System.out.println("Sua média é: " + mediaNotas);
+    }
 }
