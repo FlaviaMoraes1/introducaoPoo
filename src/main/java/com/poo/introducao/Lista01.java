@@ -64,4 +64,26 @@ public class Lista01 {
         sucessor = numeroDigitado + 1;
         System.out.println("O antecessor é " + antecessor + " e o seucessor é " + sucessor);
     }
+    public void ex05(){
+        float larguraTerreno;
+        float comprimentoTerreno;
+        float area;
+        double valorM2;
+
+        System.out.println("Qual a largura do terreno em metros? ");
+        Scanner sc5 = new Scanner(System.in);
+        larguraTerreno = sc5.nextFloat();
+
+        System.out.println("Qual o comprimento do terreno em metros? ");
+        Scanner sc6 = new Scanner(System.in);
+        comprimentoTerreno = sc6.nextFloat();
+
+        area = larguraTerreno * comprimentoTerreno;
+
+        System.out.println("Qual o valor do m2 na região em R$? ");
+        Scanner sc7 = new Scanner(System.in);
+        valorM2 = sc7.nextDouble();
+
+        System.out.println("O valor total do terreno é: R$ " + valorM2 * area);
+    }
 }
