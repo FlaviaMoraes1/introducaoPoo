@@ -37,4 +37,16 @@ public class Lista01 {
 
         System.out.println("Olá, " + nome + " " + sobrenome);
     }
+    public void ex03(){
+       double valorAConverter;
+       double valorConvertido;
+
+       System.out.println("Digite um valor para converter em dólar: ");
+       Scanner sc3 = new Scanner(System.in);
+       valorAConverter = sc3.nextDouble();
+       
+       valorConvertido = valorAConverter / (5.25);
+
+       System.out.println("O valor convertido é de: " + valorConvertido + " dólar(es)");
+    }
 }
