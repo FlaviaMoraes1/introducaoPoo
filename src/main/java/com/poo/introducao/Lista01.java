@@ -125,4 +125,16 @@ public class Lista01 {
 
         System.out.println("Sua média é: " + mediaNotas);
     }
+    public void ex08(){
+        double temperaturaFahrenheit;
+        double temperaturaCelsius;
+
+        System.out.println("Digite a temperatura em Fahrenheit que deseja converter: ");
+        Scanner sc14 = new Scanner(System.in);
+        temperaturaFahrenheit = sc14.nextDouble();
+
+        temperaturaCelsius = (temperaturaFahrenheit - 32) / 1.8;
+
+        System.out.println(temperaturaFahrenheit + " oF corresponde a " + temperaturaCelsius + " oC");
+    }
 }
