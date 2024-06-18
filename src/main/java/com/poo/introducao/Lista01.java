@@ -134,7 +134,7 @@ public class Lista01 {
         temperaturaFahrenheit = sc14.nextDouble();
 
         temperaturaCelsius = (temperaturaFahrenheit - 32) / 1.8;
-
+        
         System.out.println(temperaturaFahrenheit + " oF corresponde a " + temperaturaCelsius + " oC");
     }
 }
