@@ -70,4 +70,102 @@ public class Lista02 {
             }
         }
     }
+    void ex04(){
+        int idade;
+        System.out.println("Digite a sua idade: ");
+        Scanner leia = new Scanner(System.in);
+        idade = leia.nextInt();
+
+        if (idade >= 18){
+            System.out.println("Pode entrar!");
+        }else if (idade < 18 && idade >= 16) {
+            System.out.println("Somente acompanhado.");
+        }else{
+            System.out.println("Não pode entrar!");
+        }
+        }
+    // void ex05(){
+    //     String senha = "1234f";
+    //     String login = "flavia";
+    //     String loginDigitado;
+    //     String senhaDigitada;
+
+    //     System.out.println("Digite credenciais:");
+    //     System.out.println("Login:");
+    //     Scanner sc = new Scanner(System.in);
+    //     loginDigitado = sc.nextLine();
+
+    //     System.out.println("Senha:");
+    //     senhaDigitada = sc.nextLine();
+
+    //     if ((login.equals(loginDigitado)) && (senha.equals(senhaDigitada)));{
+    //         System.out.println("Bem vindo!");
+    //     } else {
+    //         if (!(login.equals(loginDigitado)) && !(senha.equals(senhaDigitada))); {
+    //             System.out.println("Login e senha incorretos!");
+    //         } else if (!senha.equals(senhaDigitada)){
+    //             System.out.println("Senha incorreta!");
+    //         }else{
+    //             System.out.println("Login incorreto!");
+    //         }
+    //     }    
+    // }
+    void ex06(){
+        double nota1;
+        double nota2;
+        double recuperacao;
+        double media;
+        double menorNota;
+        double maiorNota;
+
+        System.out.println("Digite a primeira nota: " );
+        Scanner sc = new Scanner(System.in);
+        nota1 = sc.nextDouble();
+
+        System.out.println("Digite a segunda nota: " );
+        Scanner sc1 = new Scanner(System.in);
+        nota2 = sc1.nextDouble();
+
+        media = (nota1 + nota2)/2;
+
+        if(media >= 6){
+            System.out.println("Parabéns, você foi aprovado! " );
+        }else{
+            System.out.println("Recuperação! " );
+            System.out.println("Digite a nota da recuperação: " );
+            recuperacao = sc.nextDouble();
+
+            if (nota1 > nota2) {
+                maiorNota = nota1;
+                menorNota = nota2;
+            }else{
+                maiorNota = nota2;
+                menorNota = nota1;
+            }
+            if (recuperacao > menorNota) {
+                media = (maiorNota + recuperacao) / 2;
+            }
+            if (media>=6) {
+                System.out.println("Aprovado! Média:" + media );
+            }else{
+                System.out.println("Reprovado! Média:" + media );
+            }
+        }
+
+    }
+    void ex07(){
+        int dividendo;
+        int divisor;
+
+        System.out.println("Digite um dividendo: ");
+        Scanner sc = new Scanner(System.in);
+        dividendo = sc.nextInt();
+
+        System.out.println("Digite o divisor: ");
+        divisor = sc.nextInt();
+
+        if ((dividendo % divisor) == 0) {
+            System.out.println(dividendo + " é divisivel por " + divisor);
+        }
+    }
 }
