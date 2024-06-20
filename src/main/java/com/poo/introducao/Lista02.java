@@ -168,4 +168,86 @@ public class Lista02 {
             System.out.println(dividendo + " é divisivel por " + divisor);
         }
     }
+    void ex08(){
+        String resposta1;
+        String resposta2;
+        String resposta3;
+        String resposta4;
+        String resposta5;
+        int tentativas = 3;
+
+        System.out.println(" -- Quiz sobre a Cidade de Petrópolis --");
+        System.out.println("1) Qual o nome da Fazendo comprada por D. Pedro II para construir seu Palácio de Verão?");
+        System.out.println("a) Fazenda do Padre Correia");
+        System.out.println("b) Fazenda do Córrego Seco");
+        System.out.println("c) Fazenda Engenhoca");
+        Scanner sc = new Scanner(System.in);
+
+        resposta1 = sc.nextLine();
+
+        if (!resposta1.equals("b")) {
+            tentativas--;
+            System.out.println("Você errou, restam " + tentativas + " tentativas.");
+        }
+
+        System.out.println("2) A antiga casa de veraneio de D. Pedro II, hoje é...");
+        System.out.println("a) O Museu Imperial");
+        System.out.println("b) A Casa da Princesa Isabel");
+        System.out.println("c) O Hotel Quitandinha");
+
+        resposta2 = sc.nextLine();
+
+        if (!resposta2.equals("a")) {
+            tentativas--;
+            System.out.println("Você errou, restam " + tentativas + " tentativas.");
+        }
+
+        System.out.println("3) Qual o santo padroeiro da cidade de Petrópolis?");
+        System.out.println("a) São Jorge");
+        System.out.println("b) Santo Antônio");
+        System.out.println("c) São Pedro de Alcântara");
+
+        resposta3 = sc.nextLine();
+
+        if (!resposta3.equals("c")) {
+            tentativas--;
+            System.out.println("Você errou, restam " + tentativas + " tentativas.");
+        }
+        if (tentativas == 0) {
+            System.out.println("Suas três tentativas terminaram, você perdeu!");
+        } else {
+            System.out.println("4) Qual a data da Fundação de Petrópolis?");
+            System.out.println("a) 16 de março de 1840");
+            System.out.println("b) 16 de março de 1843");
+            System.out.println("c) 16 de março de 1845");
+
+            resposta4 = sc.nextLine();
+
+            if (!resposta4.equals("b")) {
+                tentativas--;
+                System.out.println("Você errou, restam " + tentativas + " tentativas.");
+            }
+            if (tentativas == 0) {
+                System.out.println("Suas três tentativas terminaram, você perdeu!");
+            } else {
+                System.out.println("5) Última pergunta. Quem foi Paulo Barbosa da Silva?");
+                System.out.println("a) Mordomo-Real de D. Pedro II");
+                System.out.println("b) Engenheiro-Real de D. Pedro II");
+                System.out.println("c) Amigo de D. Pedro II");
+
+                resposta5 = sc.nextLine();
+
+                if (!resposta5.equals("a")) {
+                    tentativas--;
+                    System.out.println("Você errou, restam " + tentativas + " tentativas.");
+                }
+                if (tentativas == 0) {
+                    System.out.println("Suas três tentativas terminaram, você perdeu!");
+                } else {
+                    System.out.println("Parabéns, você sabe tudo sobre Petrópolis!");
+                }
+            }
+        }
+        sc.close();
+    }
 }
