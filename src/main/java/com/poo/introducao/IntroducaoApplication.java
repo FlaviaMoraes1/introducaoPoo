@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class IntroducaoApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		SpringApplication.run(IntroducaoApplication.class, args);
 
-		Lista04 lista = new Lista04();
-		lista.ex01();
+		Lista03 lista = new Lista03();
+		lista.ex07();
 	}
 }

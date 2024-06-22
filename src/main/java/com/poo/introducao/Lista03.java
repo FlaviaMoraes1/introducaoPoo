@@ -4,8 +4,47 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Lista03 {
-    public void ex01(){}
+    public static void limparTela(){
+        try {
+            if (System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
+            }
+        } 
+        catch (IOException | InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    public void ex01(){
 
+        int num;
+        boolean respostaErrada = true;
+
+        do{
+            System.out.println("Defina o tempo do cronômetro em segundos: ");
+            Scanner sc = new Scanner(System.in);
+            num = sc.nextInt();
+
+            if(num >= 1 && num <= 59){
+                respostaErrada = false;
+            }else{
+                System.out.println("valor inválido");
+            }
+            sc.close();
+
+        }while (respostaErrada);
+
+        for(int i = num; i >= 0 ; i--){
+            System.out.println(i);
+            
+            try{
+                Thread.sleep(1000);
+            } catch(InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+    }
     public void ex02(){
         int numero;
 
@@ -20,7 +59,6 @@ public class Lista03 {
         }
         sc.close();
     }
-
     public void ex03(){
         int num1;
         int num2;
@@ -48,38 +86,99 @@ public class Lista03 {
         System.out.println("Digite um número entre 0 e 20 e convide um amigo adivinhar.");
         Scanner sc = new Scanner(System.in);
         numeroEscolhido = sc.nextInt();
-        // limparTela();
+        limparTela();
+  
+        do{
+            System.out.println("Digite o seu palpite:");
+            palpite = sc.nextInt();
 
-        System.out.println("Digite o seu palpite:");
-        palpite = sc.nextInt();
-
-        while (palpite != numeroEscolhido) {
-            System.out.print("Digite outro número: ");
-               
-            if (palpite < numeroEscolhido) {
-                System.out.println("Muito baixo! Tente novamente.");
-                break;
-            } else if (palpite > numeroEscolhido) {
-                System.out.println("Muito alto! Tente novamente.");
-            } else {
+            if (palpite == numeroEscolhido) {
                 System.out.println("Parabéns! Você acertou!");
             }
-        }
-        // sc.close();
+            else{
+                if (palpite < numeroEscolhido) {
+                System.out.println("Muito baixo! Tente novamente.");
+                }
+                else {
+                    System.out.println("Muito alto! Tente novamente.");
+                }
+            }
+        } 
+        while(palpite != numeroEscolhido);
+        sc.close();
     }
-    // public static void limparTela() {
-    // try {
-    //     if (System.getProperty("os.name").contains("Windows")) {
-    //         new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-    //     } else {
-    //         new ProcessBuilder("clear").inheritIO().start().waitFor();
-    //     }
-    // } catch (IOException | InterruptedException e) {
-    //     e.printStackTrace();
-    // }
-
     public void ex05(){
+       
+        String login = "Flavia";
+        String senha = "1234";
+        String loginDigitado;
+        String senhaDigitada;
+        int tentativas = 3;
+        boolean respostaErrada= false;
 
+        do{
+            System.out.println("Preencha seu Login");
+            System.out.println("Login: ");
+            Scanner sc = new Scanner(System.in);
+            loginDigitado = sc.nextLine();
+
+            System.out.println("Senha: ");
+            senhaDigitada = sc.nextLine();
+
+            if ((login.equals(loginDigitado)) && (senha.equals(senhaDigitada))) {
+                System.out.println("Bem vindo!");
+                respostaErrada = true;
+            }else{
+                tentativas--;
+                if (!(login.equals(loginDigitado)) && !(senha.equals(senhaDigitada))) {
+                    System.out.println("Login e senha incorretos!");
+                }else if (!login.equals(loginDigitado)) {
+                    System.out.println("Login incorreto!");
+                }else{
+                    System.out.println("Senha incorreta!");
+                }
+            }
+            sc.close();
+        }while(tentativas > 0 && respostaErrada);
     }
+    public void ex06(){
+        
+        int andares;
 
+        System.out.println("Quantos andares? ");
+        Scanner sc = new Scanner(System.in);
+        andares = sc.nextInt();
+
+        for(int i = 1; i<=andares; i++){
+            for(int k=1; k<=(andares-i); k++){
+                System.out.print(" ");
+            }
+            for(int j = 1; j<=i*2-1; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        sc.close();
+    }
+    public void ex07(){
+
+        int largura;
+        int altura;
+
+        System.out.println("Qual largura do retangulo?");
+        Scanner sc = new Scanner(System.in);
+        largura = sc.nextInt();
+
+        System.out.println("Qual altura do retangulo?");
+        altura = sc.nextInt();
+
+        for (int i = 0; i < altura; i++) {
+            for (int j = 0; j < largura; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }  
+        sc.close();
+    }
+    
 }
