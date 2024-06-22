@@ -17,6 +17,7 @@ public class Lista02 {
         }else{
             System.out.println("O número é zero.");
         }
+        sc.close();
     }
     void ex02(){
         
@@ -38,6 +39,8 @@ public class Lista02 {
             System.out.println("O número " + num2 +
              " é maior que o número " + num1);
         }
+        sc.close();
+        sc1.close();
     }
     void ex03(){
         String resposta1;
@@ -67,8 +70,11 @@ public class Lista02 {
                 }else{
                     System.out.println("Siga para a fila Comum.");
                 }    
+                sc2.close();
             }
+            sc1.close();
         }
+        sc.close();
     }
     void ex04(){
         int idade;
@@ -83,33 +89,34 @@ public class Lista02 {
         }else{
             System.out.println("Não pode entrar!");
         }
-        }
-    // void ex05(){
-    //     String senha = "1234f";
-    //     String login = "flavia";
-    //     String loginDigitado;
-    //     String senhaDigitada;
+        leia.close();
+    }
+    void ex05(){
+        String senha = "1234";
+        String login = "flavia";
+        String loginDigitado;
+        String senhaDigitada;
 
-    //     System.out.println("Digite credenciais:");
-    //     System.out.println("Login:");
-    //     Scanner sc = new Scanner(System.in);
-    //     loginDigitado = sc.nextLine();
+        System.out.println("Digite credenciais:");
+        System.out.println("Login:");
+        Scanner sc = new Scanner(System.in);
+        loginDigitado = sc.nextLine();
 
-    //     System.out.println("Senha:");
-    //     senhaDigitada = sc.nextLine();
+        System.out.println("Senha:");
+        senhaDigitada = sc.nextLine();
 
-    //     if ((login.equals(loginDigitado)) && (senha.equals(senhaDigitada)));{
-    //         System.out.println("Bem vindo!");
-    //     } else {
-    //         if (!(login.equals(loginDigitado)) && !(senha.equals(senhaDigitada))); {
-    //             System.out.println("Login e senha incorretos!");
-    //         } else if (!senha.equals(senhaDigitada)){
-    //             System.out.println("Senha incorreta!");
-    //         }else{
-    //             System.out.println("Login incorreto!");
-    //         }
-    //     }    
-    // }
+        if ((login.equals(loginDigitado)) && (senha.equals(senhaDigitada))){
+            System.out.println("Bem vindo!");
+        } else {
+            if (!(login.equals(loginDigitado)) && !(senha.equals(senhaDigitada))) {
+                System.out.println("Login e senha incorretos!");
+            } else if (!senha.equals(senhaDigitada)){
+                System.out.println("Senha incorreta!");
+            }else{
+                System.out.println("Login incorreto!");
+            }
+        }    
+    }
     void ex06(){
         double nota1;
         double nota2;
@@ -149,9 +156,10 @@ public class Lista02 {
                 System.out.println("Aprovado! Média:" + media );
             }else{
                 System.out.println("Reprovado! Média:" + media );
-            }
+            }            
         }
-
+        sc.close();
+        sc1.close();
     }
     void ex07(){
         int dividendo;
@@ -167,6 +175,7 @@ public class Lista02 {
         if ((dividendo % divisor) == 0) {
             System.out.println(dividendo + " é divisivel por " + divisor);
         }
+        sc.close();
     }
     void ex08(){
         String resposta1;

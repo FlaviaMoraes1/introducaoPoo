@@ -21,6 +21,8 @@ public class Lista01 {
 
         System.out.println("A soma dos números é:  " + res);
 
+        sc.close();
+
     }
     public void ex02(){
 
@@ -36,6 +38,9 @@ public class Lista01 {
         sobrenome = sc2.nextLine();
 
         System.out.println("Olá, " + nome + " " + sobrenome);
+
+        sc1.close();
+        sc2.close();
     }
     public void ex03(){
         
@@ -49,6 +54,8 @@ public class Lista01 {
        valorConvertido = valorAConverter / (5.25);
 
        System.out.println("O valor convertido é de: " + valorConvertido + " dólar(es)");
+
+       sc3.close();
     }
     public void ex04(){
         int numeroDigitado;
@@ -63,6 +70,8 @@ public class Lista01 {
         antecessor = numeroDigitado - 1;
         sucessor = numeroDigitado + 1;
         System.out.println("O antecessor é " + antecessor + " e o seucessor é " + sucessor);
+
+        sc4.close();
     }
     public void ex05(){
         float larguraTerreno;
@@ -85,6 +94,9 @@ public class Lista01 {
         valorM2 = sc7.nextDouble();
 
         System.out.println("O valor total do terreno é: R$ " + valorM2 * area);
+        sc5.close();
+        sc6.close();
+        sc7.close();
     }
     public void ex06(){
         int distanciaPercorrida;
@@ -100,6 +112,9 @@ public class Lista01 {
         totalCombustivel = sc9.nextDouble();
 
         System.out.println("Sua autonomia foi de " + (distanciaPercorrida/(totalCombustivel/custoCombustivel)) + " KM/L.");
+
+        sc8.close();
+        sc9.close();
     }
     public void ex07(){
         float nota1;
@@ -124,6 +139,12 @@ public class Lista01 {
         mediaNotas = (nota1+nota2+nota3+nota4)/4;
 
         System.out.println("Sua média é: " + mediaNotas);
+
+        sc10.close();
+        sc11.close();
+        sc12.close();
+        sc13.close();
+
     }
     public void ex08(){
         double temperaturaFahrenheit;
@@ -136,5 +157,7 @@ public class Lista01 {
         temperaturaCelsius = (temperaturaFahrenheit - 32) / 1.8;
         
         System.out.println(temperaturaFahrenheit + " oF corresponde a " + temperaturaCelsius + " oC");
+
+        sc14.close();
     }
 }
