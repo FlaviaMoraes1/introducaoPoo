@@ -11,8 +11,8 @@ public class IntroducaoApplication {
 
 		limpa_windows();
 
-		Lista03 lista = new Lista03();
-		lista.ex03();
+		Lista04 lista = new Lista04();
+		lista.ex01();
 		
 		finaliza();
 	}
