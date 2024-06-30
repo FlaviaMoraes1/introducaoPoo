@@ -115,7 +115,8 @@ public class Lista02 {
             }else{
                 System.out.println("Login incorreto!");
             }
-        }    
+        } 
+        sc.close();   
     }
     void ex06(){
         double nota1;

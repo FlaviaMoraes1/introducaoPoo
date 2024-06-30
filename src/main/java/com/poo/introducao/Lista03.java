@@ -132,9 +132,11 @@ public class Lista03 {
                 tentativas--;
                 if (!(login.equals(loginDigitado)) && !(senha.equals(senhaDigitada))) {
                     System.out.println("Login e senha incorretos!");
-                }else if (!login.equals(loginDigitado)) {
+                }
+                else if (!login.equals(loginDigitado)) {
                     System.out.println("Login incorreto!");
-                }else{
+                }
+                else{
                     System.out.println("Senha incorreta!");
                 }
             }
